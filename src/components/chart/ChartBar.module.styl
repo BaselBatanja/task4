@@ -1,0 +1,68 @@
+.chartBar
+    width 30px
+    height 100%
+    position relative
+    // background-color green
+    .fill
+        height 0
+        // background-color black
+        position absolute
+        left 0
+        bottom 0
+        width 100%
+        
+
+    .nameOfChartBar
+        position absolute
+        left 50%
+        transform translateX(-50%)
+        top calc(400px + 10px)
+        max-width 50px
+        // background-color red
+
+.fillTransition
+    position absolute
+    height 100%
+    background-color black
+    width 100%
+    height 100%
+    animation animate 1s ease
+    bottom 0
+    border-top-left-radius 8px
+    border-top-right-radius 8px
+    .fillAmount
+            position relative
+            bottom 33px
+            left 18px
+            border-radius 5px
+            text-align center
+            width 20px
+            padding 5px 10px
+            width fit-content
+            background-color black
+            color white
+            font-family sans-serif
+            animation appear 1s ease
+            &:before
+                content ""
+                position absolute
+                border 4px solid red
+                border-color black transparent transparent transparent
+                left 8px
+                bottom -8px
+@keyframes animate {
+    0%{
+        height 0    
+    }
+    100%{
+        height 100%    
+    }
+}
+@keyframes appear {
+    0%{
+        opacity 0
+    }
+    100%{
+        opacity 1 
+    }
+}
